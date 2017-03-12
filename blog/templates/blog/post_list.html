@@ -8,8 +8,11 @@
         <h6>{{ post.author }}</h6>
         <h6> | </h6>
         <h6>{{ post.published_date }}</h6>
+        <h6> | </h6>
+        <h6><a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a></h6>
       </div>
       <p>{{ post.text|linebreaksbr }}</p>
+      <hr>
     </div>
   {% endfor %}
 {% endblock content %}
