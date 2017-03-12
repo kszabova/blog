@@ -1,6 +1,16 @@
 <html>
-  <head>
-    <title>Kristinkin blog</title>
-  </head>
-  <p>Ahoj!</p>
+    <head>
+        <title>Kristinkin blog</title>
+    </head>
+    <body>
+
+        {% for post in posts %}
+          <div>
+            <h1>{{ post.title }}</h1>
+            <h6>{{ post.author }}</h6>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+        {% endfor %}
+
+    </body>
 </html>
