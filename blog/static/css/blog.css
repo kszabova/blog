@@ -11,10 +11,11 @@
   padding: 20px 20px 20px 40px;
 }
 
-.header h1, .header h1 a, .header h1 a:visited, .header h1 a:active {
+.header h1, .header h1 a, .header h1 a:visited, .header h1 a:active, .header h1 a:hover {
   color: #ffffff;
   font-size: 48px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .article {
@@ -22,6 +23,10 @@
   margin-right: 0px;
   padding-top: 10px;
   padding-bottom: 50px;
+}
+
+.article h1 a:hover {
+  text-decoration: none;
 }
 
 .artData h6 {
