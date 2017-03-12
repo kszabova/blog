@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Vesper+Libre" rel="stylesheet">
+      <title>Kristinkin blog</title>
+    </head>
+    <body>
+
+        <div class="header">
+          <h1>Vitajte</h1>
+        </div>
+
+        <div class="content">
+          {% block content %}
+          {% endblock %}
+        </div>
+
+    </body>
+</html>

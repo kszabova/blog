@@ -1,0 +1,40 @@
+.content {
+  margin: 0 auto;
+  width: 60%;
+  font-family: 'Vesper Libre', serif;
+}
+
+.header {
+  font-family: 'Vesper Libre', serif;
+  background-color: #b279ae;
+  margin-top: 0;
+  padding: 20px 20px 20px 40px;
+}
+
+.header h1, .header h1 a, .header h1 a:visited, .header h1 a:active {
+  color: #ffffff;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.article {
+  width: 100%;
+  margin-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.artData h6 {
+  display: inline-block;
+}
+
+h1 a {
+  font-variant: small-caps;
+  font-size: 36px;
+  color: #b279ae;
+}
+
+h1 a:hover {
+  color: #000000;
+  text-decoration-line: none;
+}
