@@ -2,15 +2,15 @@
 
 {% block content %}
   <div class="post">
+    <h1>{{ post.title }}</h1>
     <div class="artData">
       <h6>{{ post.author }}</h6>
       {% if post.published_date %}
         <h6>{{ post.published_date }}</h6>
       {% endif %}
-      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
       <a class="btn btn-default" href="{% url 'post_delete' pk=post.pk %}">Delete</a>
     </div>
-    <h1>{{ post.title }}</h1>
     <p>{{ post.text|linebreaksbr }}</p>
   </div>
 
@@ -18,11 +18,11 @@
   <a class="btn btn-default" href="{% url 'add_comment' pk=post.pk %}">Add comment</a>
   {% for comment in post.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
-    <div class="comment">
-      <div class="date">{{ comment.created_date }}</div>
-      <strong>{{ comment.author }}</strong>
-      <p>{{ comment.text|linebreaksbr }}</p>
-    </div>
+      <div class="comment">
+        <div class="date">{{ comment.created_date }}</div>
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaksbr }}</p>
+      </div>
     {% endif %}
   {% empty %}
     <p>No comments here</p>
